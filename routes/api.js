@@ -1,7 +1,9 @@
 'use strict';
+
 require('dotenv').config(); // Load environment variables from .env
 
 console.log('NODE_ENV:', process.env.NODE_ENV); // Debug the environment variable
+
 
 module.exports = function (app) {
   // Store issues in memory (replace with a database later)
@@ -100,4 +102,5 @@ module.exports = function (app) {
     
       projectIssues.splice(issueIndex, 1); // Remove issue from array
       res.json({ result: 'successfully deleted', _id });
-    });   };
+    });    
+  };
